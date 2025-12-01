@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>מיכל אספיס הפקות</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f3f6f8;
+      color: #222;
+    }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 720px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      padding: 32px 28px 36px;
+      box-sizing: border-box;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .logo-row img {
+      max-height: 120px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-text h1 {
+      margin: 0 0 4px;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-text h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+      color: #4b5563;
+    }
+
+    .tagline {
+      margin: 18px 0 10px;
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      margin: 24px 0 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .info-list li span.label {
+      font-weight: 600;
+    }
+
+    .note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 24px 18px 28px;
+        border-radius: 16px;
+      }
+      .logo-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo-row img {
+        max-height: 90px;
+      }
+      .brand-text h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="card">
+      <div class="logo-row">
+        <!-- לוגו העסק – ודא שקובץ התמונה נמצא באותו תיקייה ונקרא logo.png -->
+        <img src="logo.jpeg" alt="מיכל אספיס הפקות - לוגו">
+        <div class="brand-text">
+          <h1>מיכל אספיס הפקות</h1>
+          <h2>הפקת אירועים לעסקים ולחברות</h2>
+        </div>
+      </div>
+
+      <p class="tagline">
+        מיכל אספיס היא מנהלת הפקות לאירועי חוויה של חברות –  
+        נופשים, ימי כיף, ערבי חברה ואירועי עובדים בארץ ובחו״ל.
+      </p>
+
+      <div>
+        <div class="section-title">פרטי העסק</div>
+        <ul class="info-list">
+          <li><span class="label">שם העסק:</span> מיכל אספיס הפקות</li>
+        </ul>
+
+        <div class="section-title">כתובות פעילות</div>
+        <ul class="info-list">
+          <li><span class="label">כתובת 1:</span> ויינברג 1, כפר סבא, ישראל</li>
+          <li><span class="label">כתובת 2:</span> אלון הגליל, ישראל</li>
+        </ul>
+
+        <div class="section-title">אתר אינטרנט</div>
+        <ul class="info-list">
+          <li><span class="label">דומיין מאומת:</span> כאן יופיע הדומיין שנרכש בגודאדי</li>
+        </ul>
+      </div>
+
+      <p class="note">
+        עמוד זה מיועד גם לצורכי אימות בעלות על הדומיין ועל העסק מול Meta / WhatsApp Business.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
