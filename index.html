@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <title>מיכל אספיס הפקות</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="מיכל אספיס הפקות – ניהול והפקת אירועי חוויה לחברות וארגונים בארץ ובחו״ל: נופשים, ימי כיף, ערבי חברה, השקות ואירועי עובדים.">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f3f6f8;
-      color: #222;
+      background: linear-gradient(135deg, #eef4f7, #f7fafc);
+      color: #111827;
     }
 
     .page-wrapper {
@@ -18,36 +25,36 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 32px 16px;
     }
 
     .card {
       background: #ffffff;
-      max-width: 720px;
+      max-width: 880px;
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      padding: 32px 28px 36px;
-      box-sizing: border-box;
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      padding: 32px 32px 36px;
     }
 
     .logo-row {
       display: flex;
       align-items: center;
       gap: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
     }
 
     .logo-row img {
-      max-height: 120px;
+      max-height: 130px;
       width: auto;
       display: block;
     }
 
     .brand-text h1 {
-      margin: 0 0 4px;
-      font-size: 28px;
-      letter-spacing: 0.03em;
+      margin: 0 0 6px;
+      font-size: 32px;
+      letter-spacing: 0.04em;
     }
 
     .brand-text h2 {
@@ -57,54 +64,123 @@
       color: #4b5563;
     }
 
-    .tagline {
-      margin: 18px 0 10px;
-      font-size: 16px;
+    .chip-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
       color: #374151;
-      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+      gap: 32px;
+      margin-top: 8px;
     }
 
     .section-title {
-      margin: 24px 0 8px;
-      font-size: 16px;
+      margin: 0 0 10px;
+      font-size: 17px;
       font-weight: 600;
       color: #111827;
     }
 
-    .info-list {
-      list-style: none;
+    .paragraph {
+      margin: 0 0 12px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .list {
+      margin: 0;
       padding: 0;
-      margin: 0 0 8px;
+      list-style: none;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #374151;
+    }
+
+    .list li::before {
+      content: "• ";
+      color: #3b82f6;
+      font-weight: 700;
+    }
+
+    .info-block {
+      margin-bottom: 18px;
+    }
+
+    .info-line {
       font-size: 15px;
       line-height: 1.8;
     }
 
-    .info-list li span.label {
+    .info-label {
       font-weight: 600;
+      color: #111827;
     }
 
-    .note {
-      margin-top: 24px;
+    .muted {
       font-size: 13px;
       color: #6b7280;
-      border-top: 1px solid #e5e7eb;
-      padding-top: 12px;
+      margin-top: 4px;
     }
 
-    @media (max-width: 600px) {
+    .highlight-box {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f1f5f9;
+      border: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .footer-line {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #9ca3af;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .domain-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px dashed #d1d5db;
+      font-size: 12px;
+      color: #4b5563;
+    }
+
+    @media (max-width: 800px) {
       .card {
         padding: 24px 18px 28px;
-        border-radius: 16px;
+        border-radius: 18px;
       }
-      .logo-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .logo-row img {
-        max-height: 90px;
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
       .brand-text h1 {
-        font-size: 24px;
+        font-size: 26px;
+      }
+      .logo-row img {
+        max-height: 110px;
       }
     }
   </style>
@@ -112,41 +188,100 @@
 <body>
   <div class="page-wrapper">
     <div class="card">
-      <div class="logo-row">
-        <!-- לוגו העסק – ודא שקובץ התמונה נמצא באותו תיקייה ונקרא logo.png -->
-        <img src="logo.jpeg" alt="מיכל אספיס הפקות - לוגו">
+      <header class="logo-row">
+        <img src="logo.png" alt="מיכל אספיס הפקות - לוגו">
         <div class="brand-text">
           <h1>מיכל אספיס הפקות</h1>
-          <h2>הפקת אירועים לעסקים ולחברות</h2>
+          <h2>ניהול והפקת אירועי חוויה לחברות וארגונים</h2>
+          <div class="chip-row">
+            <span class="chip">נופשים בארץ ובחו״ל</span>
+            <span class="chip">ימי כיף לעובדים</span>
+            <span class="chip">ערבי חברה והשקות</span>
+            <span class="chip">אינסנטיבים ומסעות פרסים</span>
+          </div>
         </div>
+      </header>
+
+      <div class="grid">
+        <!-- טור ימין: אודות ושירותים -->
+        <section>
+          <h3 class="section-title">קצת על מיכל</h3>
+          <p class="paragraph">
+            מיכל אספיס מומחית בניהול והפקת אירועים חווייתיים לחברות – מהתמונה הגדולה ועד הפרטים הקטנים.
+            כל אירוע נבנה סביב התרבות הארגונית והמסרים שהחברה רוצה להעביר לצוותים שלה, מתוך דגש על חוויה,
+            חיבור בין אנשים ותכנון לוגיסטי מדויק.
+          </p>
+          <p class="paragraph">
+            מיכל מלווה את הלקוחות משלב הרעיון והקונספט, דרך בחירת לוקיישנים וספקים,
+            ועד ניהול מלא של יום האירוע בשטח – בארץ וביעדים נבחרים בחו״ל.
+          </p>
+
+          <h3 class="section-title">סוגי אירועים לדוגמה</h3>
+          <ul class="list">
+            <li>נופשי חברה בארץ ובחו״ל</li>
+            <li>ימי כיף וגיבוש לצוותים ולמחלקות</li>
+            <li>ערבי חברה, גאלה ואירועי עובדים</li>
+            <li>השקות, אירועי לקוחות ואירועי מותג</li>
+            <li>אינסנטיבים ומסעות פרסים לעובדים מצטיינים</li>
+          </ul>
+
+          <div class="highlight-box">
+            לכל אירוע נבנה קונספט ייחודי, לוח זמנים מסודר, ותיאום מלא מול ספקים –
+            כדי שאתם תוכלו פשוט להגיע וליהנות מהחוויה יחד עם העובדים.
+          </div>
+        </section>
+
+        <!-- טור שמאל: פרטי עסק ויצירת קשר -->
+        <section>
+          <div class="info-block">
+            <h3 class="section-title">פרטי העסק</h3>
+            <p class="info-line">
+              <span class="info-label">שם העסק:</span> מיכל אספיס הפקות
+            </p>
+            <p class="info-line">
+              <span class="info-label">בעלת העסק:</span> מיכל אספיס
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="section-title">כתובות פעילות</h3>
+            <p class="info-line">
+              <span class="info-label">סטודיו והנהלה:</span> ויינברג 1, כפר סבא, ישראל
+            </p>
+            <p class="info-line">
+              <span class="info-label">מוקד הפקה נוסף:</span> אלון הגליל, ישראל
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="section-title">יצירת קשר</h3>
+            <p class="info-line">
+              <span class="info-label">טלפון:</span> ‎050-0000000
+            </p>
+            <p class="info-line">
+              <span class="info-label">דוא״ל:</span> info@i-am-pro.com
+            </p>
+            <p class="muted">
+              לשיחה קצרה על הצרכים של החברה שלכם ויצירת אירוע חווייתי בהתאמה אישית.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="section-title">נכסים דיגיטליים</h3>
+            <p class="info-line">
+              <span class="info-label">דומיין ראשי:</span> i-am-pro.com
+            </p>
+            <p class="info-line">
+              ניתן להשתמש בדומיין זה ככתובת מרכזית לכל חומרי התקשורת וההזמנות הדיגיטליות של העסק.
+            </p>
+          </div>
+        </section>
       </div>
 
-      <p class="tagline">
-        מיכל אספיס היא מנהלת הפקות לאירועי חוויה של חברות –  
-        נופשים, ימי כיף, ערבי חברה ואירועי עובדים בארץ ובחו״ל.
-      </p>
-
-      <div>
-        <div class="section-title">פרטי העסק</div>
-        <ul class="info-list">
-          <li><span class="label">שם העסק:</span> מיכל אספיס הפקות</li>
-        </ul>
-
-        <div class="section-title">כתובות פעילות</div>
-        <ul class="info-list">
-          <li><span class="label">כתובת 1:</span> ויינברג 1, כפר סבא, ישראל</li>
-          <li><span class="label">כתובת 2:</span> אלון הגליל, ישראל</li>
-        </ul>
-
-        <div class="section-title">אתר אינטרנט</div>
-        <ul class="info-list">
-          <li><span class="label">דומיין מאומת:</span> כאן יופיע הדומיין שנרכש בגודאדי</li>
-        </ul>
-      </div>
-
-      <p class="note">
-        עמוד זה מיועד גם לצורכי אימות בעלות על הדומיין ועל העסק מול Meta / WhatsApp Business.
-      </p>
+      <footer class="footer-line">
+        <span>© מיכל אספיס הפקות</span>
+        <span class="domain-pill">i-am-pro.com</span>
+      </footer>
     </div>
   </div>
 </body>
