@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>I AM מיכל אספיס הפקות | הפקות אירועים לחברות ועסקים</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Heebo', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f8f9fa;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    /* Header / Navigation */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .logo-img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #5a6c7d;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .nav-menu a:hover {
+      color: #34495e;
+    }
+
+    .contact-btn {
+      background: #1e3a5f;
+      color: white !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 25px;
+      transition: all 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #2c5282;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 75px;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e3a5f;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #5a6c7d;
+      margin-bottom: 2rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: #6c757d;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1e3a5f;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #2c5282;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
+    }
+
+    .cta-subtext {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #95a5a6;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 5rem 2rem;
+      background: white;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-subtitle {
+      color: #3498db;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: #f8f9fa;
+      padding: 2.5rem 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-color: #e8ecf1;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1.5rem;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: #6c757d;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* About Section */
+    .about {
+      padding: 5rem 2rem;
+      background: white;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .about-box {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      border-right: 4px solid #3498db;
+    }
+
+    .about-box h3 {
+      color: #2c3e50;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .about-box p {
+      color: #6c757d;
+      line-height: 1.7;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 5rem 2rem;
+      background: #1e3a5f;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .contact-item-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.5rem;
+    }
+
+    .contact-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .contact-item p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: #152a42;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #2c3e50;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .services-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        padding: 1rem;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+        <span>מיכל אספיס הפקות</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">ראשי</a></li>
+        <li><a href="#services">שירותים</a></li>
+        <li><a href="#gallery">גלריה</a></li>
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#contact" class="contact-btn">הזמינו אלינו</a></li>
+      </ul>
+      <button class="mobile-menu-btn">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="logo.jpeg" alt="I AM מיכל אספיס הפקות" class="hero-logo" onerror="this.style.display='none'">
+      <h1>הפקות אירועים לחברות ועסקים<br>בארץ ובחו״ל</h1>
+      <h2>נפשים · ימי כיף · ערבי חברה · אירועי עובדים</h2>
+      <p class="hero-description">
+        ליוו מלא משגע אנדרלמין ליט לעש המדיום האדיומו
+      </p>
+      <a href="#contact" class="cta-button">
+        <span>←</span> צרו קשר
+      </a>
+      <p class="cta-subtext">שחיית ייעוץ בחינם</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">השירותים שלנו</p>
+        <h2 class="section-title">שירותי הפקה</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏖️</div>
+          <h3>נופשים בארץ ובחו״ל</h3>
+          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏃</div>
+          <h3>ימי כיף וגיבוש</h3>
+          <p>דירות בית חוויתי מוחצא לאומי האריכון</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎭</div>
+          <h3>אנדרציסט</h3>
+          <p>בית חוויתי מוחצא לאומי האריכון</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🍽️</div>
+          <h3>דלקה</h3>
+          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎪</div>
+          <h3>ערבי חברה ואירועים</h3>
+          <p>הוען זאת קווציו לאומדון ואידרומין</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>ליוו לבויסטי מלא</h3>
+          <p>וליקל אקמיזי של כל העלפיס והמהליכים</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>כניסים והשקות</h3>
+          <p>ניהול הקמין המצויין לאריכוי חווק ואיחדין</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>אינסטטיביים ומחקרך</h3>
+          <p>חזוק מושעות חוויתית לעבודה והמליכה</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">מהעבודות שלנו</p>
+        <h2 class="section-title">גלריה</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&h=400&fit=crop" alt="אוהל קמפינג עם נוף">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop" alt="טיול בטבע">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop" alt="חוף ים">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="נוף הרים">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600&h=400&fit=crop" alt="גלישה בים">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="כדורים פורחים">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-subtitle">עוד עלינו</p>
+        <h2 class="section-title">למה לבחור בנו?</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-box">
+          <h3>ערבי חברה ואירועים</h3>
+          <p>הוון הפעמלת מלא של אודיוי עובדים</p>
+        </div>
+        <div class="about-box">
+          <h3>ימי כיף וגיבוש</h3>
+          <p>דירות בית חוויתי מוחצא לאומי האריכון</p>
+        </div>
+        <div class="about-box">
+          <h3>נופשים בארץ ובחו״ל</h3>
+          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">צור קשר</h2>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <h4>טלפון</h4>
+          <p>052-1234567</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <h4>אימייל</h4>
+          <p>info@michalaspis.co.il</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <h4>כתובת</h4>
+          <p>ויינברג 1, כפר סבא<br>אלון הגליל, ישראל</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 מיכל אספיס הפקות. כל הזכויות שמורות.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">עמוד זה מיועד גם לצורכי אימות בעלות על הדומיין ועל העסק מול Meta / WhatsApp Business.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
