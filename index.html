@@ -82,7 +82,6 @@
 
     .contact-btn:hover {
       background: #444 !important;
-      color: #fff !important;
       transform: translateY(-1px);
     }
 
@@ -102,7 +101,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #faf7f2;
+      background: url('event-boat.jpeg') center / cover no-repeat;
       padding: 5rem 2rem;
       text-align: center;
       position: relative;
@@ -112,13 +111,8 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px;
-      height: 700px;
-      background: url('logo-removebg-preview.png') center / contain no-repeat;
-      opacity: 0.05;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.52);
       pointer-events: none;
     }
 
@@ -129,15 +123,16 @@
     }
 
     .hero-logo {
-      width: 140px;
+      width: 150px;
       height: auto;
       margin-bottom: 2.5rem;
+      filter: brightness(0) invert(1);
     }
 
     .hero h1 {
       font-size: 3.2rem;
       font-weight: 700;
-      color: #1a1a1a;
+      color: #ffffff;
       margin-bottom: 1rem;
       line-height: 1.2;
       letter-spacing: -0.5px;
@@ -146,26 +141,26 @@
     .hero h2 {
       font-size: 1rem;
       font-weight: 300;
-      color: #aaa;
+      color: rgba(255, 255, 255, 0.75);
       margin-bottom: 2.8rem;
       letter-spacing: 2px;
     }
 
     .cta-button {
       display: inline-block;
-      background: #1a1a1a;
-      color: white;
+      background: #ffffff;
+      color: #1a1a1a;
       padding: 0.9rem 2.4rem;
       border-radius: 30px;
       text-decoration: none;
       font-size: 0.92rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.5px;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, transform 0.2s, color 0.2s;
     }
 
     .cta-button:hover {
-      background: #444;
+      background: #f0ebe3;
       transform: translateY(-2px);
     }
 
@@ -262,15 +257,63 @@
       transition: transform 0.35s, box-shadow 0.35s;
     }
 
+    .gallery-item.featured {
+      grid-column: span 2;
+    }
+
     .gallery-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
     }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    /* ── Visual Band ── */
+    .visual-band {
+      position: relative;
+      min-height: 420px;
+      background: url('event-champagne.jpeg') center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .visual-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.58);
+    }
+
+    .visual-band-content {
+      position: relative;
+      z-index: 1;
+      padding: 3rem 2rem;
+      max-width: 700px;
+    }
+
+    .visual-band-content .band-label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+      color: #c4a882;
+      margin-bottom: 1.2rem;
+    }
+
+    .visual-band-content h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
     }
 
     /* ── Clients ── */
@@ -389,9 +432,10 @@
       .section-title { font-size: 1.65rem; }
       .services-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.featured { grid-column: span 1; }
+      .visual-band-content h2 { font-size: 1.6rem; }
       .header { padding: 0.9rem 1.2rem; }
       .contact-info { flex-direction: column; gap: 2.5rem; align-items: center; }
-      .hero::before { width: 100vw; height: 100vw; }
     }
   </style>
 </head>
@@ -465,27 +509,32 @@
         <h2 class="section-title">גלריה</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&h=400&fit=crop" alt="אוהל קמפינג עם נוף">
+        <div class="gallery-item featured">
+          <img src="event-buffet.jpeg" alt="בופה חגיגי">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop" alt="טיול בטבע">
+          <img src="event-welcome.jpeg" alt="קבלת פנים לאירוע">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=600&h=400&fit=crop" alt="חוף ים">
+          <img src="event-wine-bar.jpeg" alt="בר יין ושמפניה">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="נוף הרים">
+          <img src="event-cocktails.jpeg" alt="קוקטיילים מעוצבים">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=600&h=400&fit=crop" alt="גלישה בים">
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=400&fit=crop" alt="כדורים פורחים">
+          <img src="event-hof-galil.jpeg" alt="אירוע חוף הגליל">
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Visual Band -->
+  <div class="visual-band">
+    <div class="visual-band-content">
+      <span class="band-label">הגישה שלנו</span>
+      <h2>כל פרט מחושב.<br>כל רגע בלתי נשכח.</h2>
+    </div>
+  </div>
 
   <!-- Clients -->
   <section id="clients" class="clients">
