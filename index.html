@@ -314,6 +314,75 @@
       line-height: 1.7;
     }
 
+    /* Clients Section */
+    .clients {
+      padding: 5rem 2rem;
+      background: white;
+      overflow: hidden;
+    }
+
+    .clients-track-wrapper {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .clients-track {
+      display: flex;
+      gap: 2rem;
+      width: max-content;
+      animation: scroll-clients 30s linear infinite;
+    }
+
+    .clients-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-clients {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .client-logo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 80px;
+      background: #f8f9fa;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e8ecf1;
+      transition: all 0.3s;
+      padding: 1rem;
+    }
+
+    .client-logo:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-color: #d0d8e4;
+    }
+
+    .client-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+
+    .client-logo:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .client-logo span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #5a6c7d;
+      text-align: center;
+    }
+
     /* Contact Section */
     .contact {
       padding: 5rem 2rem;
@@ -429,7 +498,7 @@
         <li><a href="#home">ראשי</a></li>
         <li><a href="#services">שירותים</a></li>
         <li><a href="#gallery">גלריה</a></li>
-        <li><a href="#about">אודות</a></li>
+        <li><a href="#clients">לקוחות</a></li>
         <li><a href="#contact" class="contact-btn">צור קשר</a></li>
       </ul>
       <button class="mobile-menu-btn">☰</button>
@@ -512,26 +581,34 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
+  <!-- Clients Section -->
+  <section id="clients" class="clients">
     <div class="container">
       <div class="section-header">
-        <p class="section-subtitle">עוד עלינו</p>
-        <h2 class="section-title">למה לבחור בנו?</h2>
+        <p class="section-subtitle">סומכים עלינו</p>
+        <h2 class="section-title">לקוחות</h2>
       </div>
-      <div class="about-content">
-        <div class="about-box">
-          <h3>ערבי חברה ואירועים</h3>
-          <p>הוון הפעמלת מלא של אודיוי עובדים</p>
-        </div>
-        <div class="about-box">
-          <h3>ימי כיף וגיבוש</h3>
-          <p>דירות בית חוויתי מוחצא לאומי האריכון</p>
-        </div>
-        <div class="about-box">
-          <h3>נופשים בארץ ובחו״ל</h3>
-          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
-        </div>
+    </div>
+    <div class="clients-track-wrapper">
+      <div class="clients-track">
+        <!-- Set 1 -->
+        <div class="client-logo"><span>לקוח 1</span></div>
+        <div class="client-logo"><span>לקוח 2</span></div>
+        <div class="client-logo"><span>לקוח 3</span></div>
+        <div class="client-logo"><span>לקוח 4</span></div>
+        <div class="client-logo"><span>לקוח 5</span></div>
+        <div class="client-logo"><span>לקוח 6</span></div>
+        <div class="client-logo"><span>לקוח 7</span></div>
+        <div class="client-logo"><span>לקוח 8</span></div>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="client-logo"><span>לקוח 1</span></div>
+        <div class="client-logo"><span>לקוח 2</span></div>
+        <div class="client-logo"><span>לקוח 3</span></div>
+        <div class="client-logo"><span>לקוח 4</span></div>
+        <div class="client-logo"><span>לקוח 5</span></div>
+        <div class="client-logo"><span>לקוח 6</span></div>
+        <div class="client-logo"><span>לקוח 7</span></div>
+        <div class="client-logo"><span>לקוח 8</span></div>
       </div>
     </div>
   </section>
@@ -553,18 +630,13 @@
           <h4>אימייל</h4>
           <p>michal@i-am-pro.com</p>
         </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
-          <h4>כתובת</h4>
-          <p>ויינברג 1, כפר סבא<br>אלון הגליל, ישראל</p>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 מיכל אספיס הפקות. כל הזכויות שמורות.</p>
+    <p>&copy; 2026 מיכל אספיס הפקות. כל הזכויות שמורות.</p>
 
   </footer>
 
