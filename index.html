@@ -194,8 +194,16 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .service-card {
@@ -451,44 +459,24 @@
       </div>
       <div class="services-grid">
         <div class="service-card">
+          <div class="service-icon">🎭</div>
+          <h3>ערבי חברה וארועים</h3>
+          <p>תכנון והפקה מלאה של אירועי חברה מרשימים – מערבי גאלה ועד מסיבות עובדים בלתי נשכחות</p>
+        </div>
+        <div class="service-card">
           <div class="service-icon">🏖️</div>
           <h3>נופשים בארץ ובחו״ל</h3>
-          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
+          <p>חבילות נופש מותאמות אישית לקבוצות וחברות, בארץ ובחו״ל, עם ליווי מלא מהתכנון ועד הביצוע</p>
         </div>
         <div class="service-card">
           <div class="service-icon">🏃</div>
-          <h3>ימי כיף וגיבוש</h3>
-          <p>דירות בית חוויתי מוחצא לאומי האריכון</p>
+          <h3>ימי כייף וגיבוש</h3>
+          <p>חוויות גיבוש מעוצבות שמחזקות את הצוות ויוצרות זיכרונות משותפים שנשארים לאורך זמן</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">🎭</div>
-          <h3>אנדרציסט</h3>
-          <p>בית חוויתי מוחצא לאומי האריכון</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🍽️</div>
-          <h3>דלקה</h3>
-          <p>הפקה מושלמת מהדרה כל נושא ופיק</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎪</div>
-          <h3>ערבי חברה ואירועים</h3>
-          <p>הוען זאת קווציו לאומדון ואידרומין</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>ליוו לבויסטי מלא</h3>
-          <p>וליקל אקמיזי של כל העלפיס והמהליכים</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📋</div>
-          <h3>כניסים והשקות</h3>
-          <p>ניהול הקמין המצויין לאריכוי חווק ואיחדין</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎯</div>
-          <h3>אינסטטיביים ומחקרך</h3>
-          <p>חזוק מושעות חוויתית לעבודה והמליכה</p>
+          <div class="service-icon">✈️</div>
+          <h3>טיולי אינסנטיב</h3>
+          <p>תוכניות תמריץ יוקרתיות לעובדים מצטיינים ולקוחות מיוחדים – חוויה שמניעה לתוצאות</p>
         </div>
       </div>
     </div>
